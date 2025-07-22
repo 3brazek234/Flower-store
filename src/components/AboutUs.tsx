@@ -4,28 +4,28 @@ export const AboutUs = () => {
   const features = [
     {
       icon: Heart,
-      title: "شغف بالجمال",
-      description: "نحن نؤمن بأن الورود تنقل المشاعر وتخلق اللحظات السحرية"
+      title: "Passion for Beauty",
+      description: "We believe flowers convey emotions and create magical moments."
     },
     {
       icon: Users,
-      title: "خبرة 15 عاماً",
-      description: "فريق من الخبراء في تنسيق الورود وتصميم الباقات"
+      title: "15 Years of Experience",
+      description: "A team of experts in flower arrangement and bouquet design."
     },
     {
       icon: Award,
-      title: "جودة مضمونة", 
-      description: "نختار أجود أنواع الورود الطبيعية من أفضل المزارع"
+      title: "Guaranteed Quality", 
+      description: "We select the finest natural flowers from the best farms."
     },
     {
       icon: Flower2,
-      title: "تصاميم فريدة",
-      description: "نبتكر تصاميم مميزة تناسب جميع المناسبات والأذواق"
+      title: "Unique Designs",
+      description: "We create unique designs for all occasions and tastes."
     }
   ];
 
   return (
-    <section className="py-24 gradient-hero relative overflow-hidden" id="about">
+    <section className="py-24 bg-green-50 relative overflow-hidden" id="about">
       {/* Decorative Elements */}
       <div className="absolute top-10 left-10 animate-float opacity-20">
         <div className="w-32 h-32 gradient-magical rounded-full blur-xl"></div>
@@ -35,19 +35,16 @@ export const AboutUs = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20 animate-slide-up">
-          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3 mb-6">
-            <Heart className="w-5 h-5 text-primary" />
-            <span className="text-primary font-semibold">تعرف علينا</span>
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-green-100 rounded-full px-6 py-3 mb-6">
+            <Heart className="w-5 h-5 text-green-600" />
+            <span className="text-green-700 font-semibold">About Us</span>
           </div>
-          
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
-            قصة حب مع 
-            <span className="gradient-primary bg-clip-text text-transparent">الجمال</span>
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+            A Love Story with <span className="text-green-600">Beauty</span>
           </h2>
-          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            منذ 15 عاماً ونحن نسعى لجعل كل لحظة في حياتكم أجمل من خلال أرقى الورود 
-            وأكثر التصاميم إبداعاً في عالم الزهور
+          <p className="text-2xl text-gray-500 max-w-4xl mx-auto leading-relaxed">
+            For 15 years, we have been making every moment in your life more beautiful with the finest flowers and the most creative designs in the world of floristry.
           </p>
         </div>
 
@@ -55,38 +52,32 @@ export const AboutUs = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="text-center group animate-scale-in hover-magical p-8 rounded-3xl bg-card/80 backdrop-blur-sm shadow-elegant hover:shadow-magical transition-all duration-500"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className="text-center group p-8 rounded-3xl bg-white/90 shadow-md hover:shadow-lg transition-all duration-500"
             >
               <div className="relative mb-6">
-                <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto shadow-glow group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto shadow-sm">
+                  <feature.icon className="w-10 h-10 text-green-600" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 gradient-accent rounded-full animate-bounce-soft opacity-80"></div>
               </div>
-              
-              <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-700 transition-colors">
                 {feature.title}
               </h3>
-              
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-gray-500 leading-relaxed text-lg">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="text-center animate-slide-up">
-          <div className="inline-block p-10 rounded-3xl bg-card/80 backdrop-blur-sm shadow-magical hover:shadow-glow transition-all hover-glow max-w-4xl">
+        <div className="text-center">
+          <div className="inline-block p-10 rounded-3xl bg-white/90 shadow-md max-w-4xl">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Star className="w-8 h-8 text-accent fill-current animate-bounce-soft" />
-              <h3 className="text-3xl font-bold text-foreground">رسالتنا السحرية</h3>
-              <Star className="w-8 h-8 text-accent fill-current animate-bounce-soft" />
+              <Star className="w-8 h-8 text-green-600" />
+              <h3 className="text-3xl font-bold text-gray-900">Our Magical Message</h3>
+              <Star className="w-8 h-8 text-green-600" />
             </div>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              نؤمن بأن كل ورده تحمل رسالة حب، وكل باقة تحكي قصة جميلة. 
-              نسعى لتحويل أحلامكم إلى واقع ملون بأجمل الألوان الطبيعية، 
-              لأن الحب يستحق أجمل التعبيرات 💝
+            <p className="text-xl text-gray-500 leading-relaxed">
+              We believe every flower carries a message of love, and every bouquet tells a beautiful story. We strive to turn your dreams into a reality colored with the most beautiful natural colors, because love deserves the most beautiful expressions.
             </p>
           </div>
         </div>
